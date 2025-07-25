@@ -1,0 +1,50 @@
+{
+    "Appetizers": [
+        {
+            "name": "Spring Rolls",
+            "price": 5.99,
+            "img": "img/burger.jpg"
+        },
+        {
+            "name": "Garlic Bread",
+            "price": 4.5,
+            "img": "img/pizza.jpg"
+        }
+    ],
+    "Main Course": [
+        {
+            "name": "Grilled Chicken",
+            "price": 12.99,
+            "img": "img/pizza.jpg"
+        },
+        {
+            "name": "Veggie Burger",
+            "price": 9.99,
+            "img": "img/pizza.jpg"
+        }
+    ],
+    "Desserts": [
+        {
+            "name": "Chocolate Cake",
+            "price": 6.5,
+            "img": "img/burger.jpg"
+        },
+        {
+            "name": "Ice Cream",
+            "price": 4.99,
+            "img": "img/burger.jpg"
+        }
+    ],
+    "Soup": [
+        {
+            "name": "Tomyam Sotong",
+            "price": 6.5,
+            "img": "img/burger.jpg"
+        },
+        {
+            "name": "Tulang",
+            "price": 4.99,
+            "img": "img/burger.jpg"
+        }
+    ]
+}
