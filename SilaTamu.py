@@ -2,10 +2,10 @@ import streamlit as st
 import json
 
 
-def printOrder(TableNum,OrderItem,TotalHarga):
-    print("--------------------------------")
-    print("Meja Nombor : " + str(TableNum) + f" (RM {TotalHarga:.2f})")
-    print("--------------------------------")
+def printOrder(CustomerName,TableNum,OrderItem,TotalHarga):
+    print("-------------------------------------")
+    print(f" {CustomerName.upper()} [" + "Meja Nombor : " + str(TableNum) + f" (RM {TotalHarga:.2f})]")
+    print("-------------------------------------")
     for item,details in OrderItem.items():
         print(f"{item} x {details['qty']} = RM{subtotal:.2f}")
 
@@ -17,6 +17,7 @@ with open('SilaTamu-Menu.json') as myMenu:
 st.title("🍽️ SilaTamu 🍽️")
 selected_table = st.selectbox("Pilih nombor meja:", list(range(1, 11)))
 st.write(f"🪑 Meja nombor: {selected_table}")
+CustomerName = st.text_input("Nama Pelanggan")
 # Create tabs for each category
 tabs = st.tabs(list(menu.keys()))
 
@@ -50,7 +51,7 @@ if order_cart:
         st.write(f"{item} x {details['qty']} = RM{subtotal:.2f}")
     st.markdown(f"### Total: RM{total:.2f}")
     if st.button("✅ Place Order"):
-        printOrder(selected_table,order_cart,total)
+        printOrder(CustomerName,selected_table,order_cart,total)
         st.write(f"🪑 Meja nombor: {selected_table}")
         for item, details in order_cart.items():
             subtotal = details["qty"] * details["price"]
