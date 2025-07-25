@@ -1,13 +1,22 @@
 import streamlit as st
 import json
 
+
+def printOrder(TableNum,OrderItem,TotalHarga):
+    print("--------------------------------")
+    print("Meja Nombor : " + str(TableNum) + f" (RM {TotalHarga:.2f})")
+    print("--------------------------------")
+    for item,details in OrderItem.items():
+        print(f"{item} x {details['qty']} = RM{subtotal:.2f}")
+
 # Sample menu data
 with open('SilaTamu-Menu.json') as myMenu:
     menu = json.load(myMenu)
 
 # App title
 st.title("🍽️ SilaTamu 🍽️")
-
+selected_table = st.selectbox("Pilih nombor meja:", list(range(1, 11)))
+st.write(f"🪑 Meja nombor: {selected_table}")
 # Create tabs for each category
 tabs = st.tabs(list(menu.keys()))
 
@@ -41,6 +50,12 @@ if order_cart:
         st.write(f"{item} x {details['qty']} = RM{subtotal:.2f}")
     st.markdown(f"### Total: RM{total:.2f}")
     if st.button("✅ Place Order"):
-        print("Sent Order")
+        printOrder(selected_table,order_cart,total)
+        st.write(f"🪑 Meja nombor: {selected_table}")
+        for item, details in order_cart.items():
+            subtotal = details["qty"] * details["price"]
+            total += subtotal
+            st.write(f"{item} x {details['qty']} = RM{subtotal:.2f}")
+        
 else:
     st.info("No items selected yet.")
