@@ -1,23 +1,12 @@
 import streamlit as st
+import json
 
 # Sample menu data
-menu = {
-    "Appetizers": [
-        {"name": "Spring Rolls", "price": 5.99, "img": "img/burger.jpg"},
-        {"name": "Garlic Bread", "price": 4.50, "img": "img/pizza.jpg"}
-    ],
-    "Main Course": [
-        {"name": "Grilled Chicken", "price": 12.99, "img": "img/pizza.jpg"},
-        {"name": "Veggie Burger", "price": 9.99, "img": "img/pizza.jpg"}
-    ],
-    "Desserts": [
-        {"name": "Chocolate Cake", "price": 6.50, "img": "img/burger.jpg"},
-        {"name": "Ice Cream", "price": 4.99, "img": "img/burger.jpg"}
-    ]
-}
+with open('SilaTamu-Menu.json') as myMenu:
+    menu = json.load(myMenu)
 
 # App title
-st.title("🍽️ Food Ordering App")
+st.title("🍽️ SilaTamu 🍽️")
 
 # Create tabs for each category
 tabs = st.tabs(list(menu.keys()))
@@ -51,6 +40,7 @@ if order_cart:
         total += subtotal
         st.write(f"{item} x {details['qty']} = RM{subtotal:.2f}")
     st.markdown(f"### Total: RM{total:.2f}")
-    st.button("✅ Place Order")
+    if st.button("✅ Place Order"):
+        print("Sent Order")
 else:
     st.info("No items selected yet.")
