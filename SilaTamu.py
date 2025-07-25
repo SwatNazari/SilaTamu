@@ -44,25 +44,33 @@ with col1:
 with col2:
     selected_table = st.selectbox("🪑 Nombor Meja", list(range(1, 11)))
 
-# Tabs per category
+# ---------------------- Search Function ----------------------
+search_query = st.text_input("🔍 Cari Menu", "")
+
+# ---------------------- Tabs per Category ----------------------
 tabs = st.tabs(list(menu.keys()))
 order_cart = {}
 
-# Menu Items
+# ---------------------- Menu Items with Search ----------------------
 for i, category in enumerate(menu.keys()):
     with tabs[i]:
         st.header(f"📂 {category}")
+        found = False
         for item in menu[category]:
-            col1, col2, col3 = st.columns([1, 2, 1])
-            with col1:
-                st.image(item["img"], width=100)
-            with col2:
-                st.subheader(item["name"])
-                st.write(f"💵 Harga: RM{item['price']:.2f}")
-            with col3:
-                qty = st.number_input(f"📦 {item['name']}", min_value=0, step=1, key=item['name'])
-                if qty > 0:
-                    order_cart[item["name"]] = {"qty": qty, "price": item["price"]}
+            if search_query.lower() in item["name"].lower():
+                found = True
+                col1, col2, col3 = st.columns([1, 2, 1])
+                with col1:
+                    st.image(item["img"], width=100)
+                with col2:
+                    st.subheader(item["name"])
+                    st.write(f"💵 Harga: RM{item['price']:.2f}")
+                with col3:
+                    qty = st.number_input(f"📦 {item['name']}", min_value=0, step=1, key=item['name'])
+                    if qty > 0:
+                        order_cart[item["name"]] = {"qty": qty, "price": item["price"]}
+        if not found and search_query:
+            st.info(f"❌ Tiada menu ditemui dalam kategori **{category}** yang sepadan dengan '**{search_query}**'.")
 
 # ---------------------- Order Summary ----------------------
 st.markdown("---")
@@ -87,6 +95,11 @@ if order_cart:
                 st.warning("⚠️ Sila masukkan nama pelanggan.")
     with col2:
         if st.button("🧹 Kosongkan Pesanan"):
+            # Padam semua nilai dalam session_state untuk item
+            for category in menu.values():
+                for item in category:
+                    if item["name"] in st.session_state:
+                        del st.session_state[item["name"]]
             st.experimental_rerun()
 else:
     st.info("🛒 Tiada item dalam pesanan. Sila pilih dari menu di atas.")
