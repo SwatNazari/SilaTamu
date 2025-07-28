@@ -43,9 +43,8 @@ def send_order_to_whatsapp(CustomerName, TableNum, OrderItem, TotalHarga, phone_
     # Generate WhatsApp link
     whatsapp_url = f"https://wa.me/{phone_number}?text={encoded_message}"
     # Show link on Streamlit (phone users can tap this to send)
-    #st.markdown(f"[📲 Klik untuk Hantar ke WhatsApp]({whatsapp_url})", unsafe_allow_html=True)
-    st.markdown(f"""{whatsapp_url}" />""", unsafe_allow_html=True)
-
+    st.markdown(f"[📲 Klik untuk Sahkan Pesanan WhatsApp]({whatsapp_url})", unsafe_allow_html=True)
+    st.success(f"🎉 Pesanan untuk **{CustomerName.upper()}** telah dihantar!")
 # ---------------------- Load Menu ----------------------
 with open('SilaTamu-Menu.json') as myMenu:
     menu = json.load(myMenu)
@@ -119,7 +118,6 @@ if order_cart:
             if CustomerName.strip():
                 printOrder(CustomerName, selected_table, order_cart, total)
                 whatsapp_url = send_order_to_whatsapp(CustomerName, selected_table, order_cart, total)
-                st.success(f"🎉 Pesanan untuk **{CustomerName.upper()}** telah dihantar!")
             else:
                 st.warning("⚠️ Sila masukkan nama pelanggan.")
     with col2:
