@@ -18,13 +18,14 @@ def printOrder(CustomerName, TableNum, OrderItem, TotalHarga):
 
 # ---------------------- Function: Save Order to Text File ----------------------
 def send_order_to_whatsapp(CustomerName, TableNum, OrderItem, TotalHarga, phone_number="60193637573"):
-    message_lines = []
-    message_lines.append("📦 *Pesanan Baru Diterima*")
-    message_lines.append("=====================================")
-    message_lines.append(f"👤 *Nama Pelanggan:* {CustomerName.upper()}")
-    message_lines.append(f"🪑 *Nombor Meja:* {TableNum}")
-    message_lines.append(f"🕒 *Masa:* {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
-    message_lines.append("-------------------------------------")
+    message_lines = [
+        "📦 *Pesanan Baru Diterima*",
+        "=====================================",
+        f"👤 *Nama Pelanggan:* {CustomerName.upper()}",
+        f"🪑 *Nombor Meja:* {TableNum}",
+        f"🕒 *Masa:* {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}",
+        "-------------------------------------",
+    ]
     for item, details in OrderItem.items():
         qty = details["qty"]
         price = details["price"]
@@ -32,16 +33,17 @@ def send_order_to_whatsapp(CustomerName, TableNum, OrderItem, TotalHarga, phone_
         message_lines.append(f"{item} x {qty} = RM{subtotal:.2f}")
         if details.get("note"):
             message_lines.append(f"  Nota: {details['note']}")
-    message_lines.append("-------------------------------------")
-    message_lines.append(f"💵 *Jumlah:* RM{TotalHarga:.2f}")
-    message_lines.append("=====================================")
-    # Join all lines into a single string and encode for URL
+    message_lines.extend([
+        "-------------------------------------",
+        f"💵 *Jumlah:* RM{TotalHarga:.2f}",
+        "=====================================",
+    ])
     full_message = "\n".join(message_lines)
     encoded_message = urllib.parse.quote(full_message)
-    # Construct WhatsApp URL (use 'wa.me' for mobile and 'web.whatsapp.com' for desktop)
+    # Generate WhatsApp link
     whatsapp_url = f"https://wa.me/{phone_number}?text={encoded_message}"
-    # Open WhatsApp in browser
-    webbrowser.open(whatsapp_url)
+    # Show link on Streamlit (phone users can tap this to send)
+    st.markdown(f"[📲 Klik untuk Hantar ke WhatsApp]({whatsapp_url})", unsafe_allow_html=True)
 
 # ---------------------- Load Menu ----------------------
 with open('SilaTamu-Menu.json') as myMenu:
