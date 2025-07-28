@@ -40,7 +40,6 @@ def send_order_to_whatsapp(CustomerName, TableNum, OrderItem, TotalHarga, phone_
     ])
     full_message = "\n".join(message_lines)
     encoded_message = urllib.parse.quote(full_message)
-    # Generate WhatsApp link
     whatsapp_url = f"https://wa.me/{phone_number}?text={encoded_message}"
     return whatsapp_url
 
