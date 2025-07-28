@@ -73,7 +73,13 @@ for i, category in enumerate(menu.keys()):
                 st.image(item["img"], width=100)
             with col2:
                 st.subheader(item["name"])
-                st.write(f"💵 Harga: RM{item['price']:.2f}")
+                # Show price based on available keys
+                if "price" in item:
+                    st.write(f"💵 Harga: RM{item['price']:.2f}")
+                elif "hot" in item and "iced" in item:
+                    st.write(f"💵 Harga Hot: RM{item['hot']:.2f} | Iced: RM{item['iced']:.2f}")
+                else:
+                    st.write("💵 Harga tidak tersedia")
             with col3:
                 qty_key = f"{category}_{item['name']}_qty"
                 note_key = f"{category}_{item['name']}_note"
@@ -81,9 +87,13 @@ for i, category in enumerate(menu.keys()):
                 note = st.text_input("Nota", key=note_key)
 
                 if qty > 0:
+                    # Get price: prefer 'price', fallback to 'hot' if price missing
+                    price = item.get("price")
+                    if price is None:
+                        price = item.get("hot", 0)
                     order_cart[item["name"]] = {
                         "qty": qty,
-                        "price": item["price"],
+                        "price": price,
                         "note": note.strip()
                     }
 
@@ -111,7 +121,7 @@ if order_cart:
                 st.warning("⚠️ Sila masukkan nama pelanggan dan nombor telefon.")
     with col2:
         if st.button("🧹 Kosongkan Pesanan"):
-            # Reset semua input (qty dan note)
+            # Reset all qty and note inputs from session state
             for category in menu.keys():
                 for item in menu[category]:
                     qty_key = f"{category}_{item['name']}_qty"
