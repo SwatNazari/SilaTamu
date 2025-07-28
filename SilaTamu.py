@@ -4,9 +4,9 @@ from datetime import datetime
 import urllib.parse
 
 # ---------------------- Function: Print to Console ----------------------
-def printOrder(CustomerName, TableNum, OrderItem, TotalHarga):
+def printOrder(CustomerName, PhoneNumber, OrderItem, TotalHarga):
     print("-------------------------------------")
-    print(f"{CustomerName.upper()} [Meja Nombor: {TableNum} | Jumlah: RM{TotalHarga:.2f}]")
+    print(f"{CustomerName.upper()} [Nombor Telefon: {PhoneNumber} | Jumlah: RM{TotalHarga:.2f}]")
     print("-------------------------------------")
     for item, details in OrderItem.items():
         subtotal = details["qty"] * details["price"]
@@ -16,12 +16,12 @@ def printOrder(CustomerName, TableNum, OrderItem, TotalHarga):
     print("-------------------------------------")
 
 # ---------------------- Function: Send Order to WhatsApp ----------------------
-def send_order_to_whatsapp(CustomerName, TableNum, OrderItem, TotalHarga, phone_number="60193637573"):
+def send_order_to_whatsapp(CustomerName, PhoneNumber, OrderItem, TotalHarga, phone_number_receiver="60193637573"):
     message_lines = [
         "📦 *Pesanan Baru Diterima*",
         "=====================================",
         f"👤 *Nama Pelanggan:* {CustomerName.upper()}",
-        f"🪑 *Nombor Meja:* {TableNum}",
+        f"📞 *Nombor Telefon:* {PhoneNumber}",
         f"🕒 *Masa:* {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}",
         "-------------------------------------",
     ]
@@ -39,7 +39,7 @@ def send_order_to_whatsapp(CustomerName, TableNum, OrderItem, TotalHarga, phone_
     ])
     full_message = "\n".join(message_lines)
     encoded_message = urllib.parse.quote(full_message)
-    whatsapp_url = f"https://wa.me/{phone_number}?text={encoded_message}"
+    whatsapp_url = f"https://wa.me/{phone_number_receiver}?text={encoded_message}"
     st.markdown(f"[📲 Klik disini untuk mengesahkan pesanan]({whatsapp_url})", unsafe_allow_html=True)
     return whatsapp_url
 
@@ -52,12 +52,12 @@ st.set_page_config(page_title="SilaTamu Ordering", page_icon="🍽️")
 st.title("🍽️ Selamat Datang ke SilaTamu!")
 st.markdown("Pilih menu kegemaran anda dan buat pesanan anda sekarang. 😊")
 
-# Customer name and table number
+# Customer name and phone number input
 col1, col2 = st.columns([2, 1])
 with col1:
     CustomerName = st.text_input("🧑‍🍳 Nama Pelanggan")
 with col2:
-    selected_table = st.selectbox("🪑 Nombor Meja", list(range(1, 11)))
+    PhoneNumber = st.text_input("📞 Nombor Telefon", max_chars=15)
 
 # ---------------------- Tabs per Category ----------------------
 tabs = st.tabs(list(menu.keys()))
@@ -104,11 +104,11 @@ if order_cart:
     col1, col2 = st.columns(2)
     with col1:
         if st.button("✅ Hantar Pesanan"):
-            if CustomerName.strip():
-                printOrder(CustomerName, selected_table, order_cart, total)
-                send_order_to_whatsapp(CustomerName, selected_table, order_cart, total)
+            if CustomerName.strip() and PhoneNumber.strip():
+                printOrder(CustomerName, PhoneNumber, order_cart, total)
+                send_order_to_whatsapp(CustomerName, PhoneNumber, order_cart, total)
             else:
-                st.warning("⚠️ Sila masukkan nama pelanggan.")
+                st.warning("⚠️ Sila masukkan nama pelanggan dan nombor telefon.")
     with col2:
         if st.button("🧹 Kosongkan Pesanan"):
             # Reset semua input (qty dan note)
