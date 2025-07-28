@@ -116,14 +116,13 @@ if order_cart:
             if CustomerName.strip():
                 printOrder(CustomerName, selected_table, order_cart, total)
                 whatsapp_url = send_order_to_whatsapp(CustomerName, selected_table, order_cart, total)
+    
                 st.success(f"🎉 Pesanan untuk **{CustomerName.upper()}** telah dihantar!")
-                # Open WhatsApp in new tab
-                js = f"""
-                <script>
-                window.open("{whatsapp_url}", "_blank").focus();
-                </script>
-                """
-                st.markdown(js, unsafe_allow_html=True)
+    
+                # ✅ Auto-open WhatsApp in phone browser (goes to WhatsApp app)
+                st.markdown(f"""
+                    <meta http-equiv="refresh" content="0; url={whatsapp_url}" />
+                    """, unsafe_allow_html=True)
             else:
                 st.warning("⚠️ Sila masukkan nama pelanggan.")
     with col2:
