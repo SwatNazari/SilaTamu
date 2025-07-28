@@ -42,8 +42,7 @@ def send_order_to_whatsapp(CustomerName, TableNum, OrderItem, TotalHarga, phone_
     encoded_message = urllib.parse.quote(full_message)
     # Generate WhatsApp link
     whatsapp_url = f"https://wa.me/{phone_number}?text={encoded_message}"
-    # Show link on Streamlit (phone users can tap this to send)
-    st.markdown(f"[📲 Klik untuk Hantar ke WhatsApp]({whatsapp_url})", unsafe_allow_html=True)
+    return whatsapp_url
 
 # ---------------------- Load Menu ----------------------
 with open('SilaTamu-Menu.json') as myMenu:
@@ -115,12 +114,21 @@ if order_cart:
     col1, col2 = st.columns(2)
     with col1:
         if st.button("✅ Hantar Pesanan"):
-            if CustomerName.strip():
-                printOrder(CustomerName, selected_table, order_cart, total)
-                send_order_to_whatsapp(CustomerName, selected_table, order_cart, total, phone_number="60193637573")
-                st.success(f"🎉 Pesanan untuk **{CustomerName.upper()}** telah dihantar dan disimpan dalam fail teks!")
-            else:
-                st.warning("⚠️ Sila masukkan nama pelanggan.")
+        if CustomerName.strip():
+            printOrder(CustomerName, selected_table, order_cart, total)
+            whatsapp_url = send_order_to_whatsapp(CustomerName, selected_table, order_cart, total)
+
+            st.success(f"🎉 Pesanan untuk **{CustomerName.upper()}** telah dihantar!")
+            
+            # Open WhatsApp in new tab
+            js = f"""
+            <script>
+            window.open("{whatsapp_url}", "_blank").focus();
+            </script>
+            """
+            st.markdown(js, unsafe_allow_html=True)
+        else:
+            st.warning("⚠️ Sila masukkan nama pelanggan.")
     with col2:
         if st.button("🧹 Kosongkan Pesanan"):
             # Reset semua input (qty dan note)
