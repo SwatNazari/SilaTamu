@@ -3,7 +3,7 @@
         {
             "name": "Nasi Lemak Bungkus",
             "price": 2.00,
-            "img": "img/burger.jpg"
+            "img": "img/nasilemak1.jpg"
         },
         {
             "name": "Nasi Lemak Telur Mata",
@@ -13,19 +13,19 @@
         {
             "name": "Nasi Lemak Sambal Sotong",
             "price": 6,
-            "img": "img/burger.jpg"
+            "img": "img/nasilemak1.jpg"
         },
         {
             "name": "Nasi Lemak Ayam Goreng Berempah",
             "price": 7.90,
-            "img": "img/burger.jpg"
+            "img": "img/nasilemak1.jpg"
         }
     ],
     "Our Speciality": [
           {
             "name": "Chicken Chop",
             "price": 11.90,
-            "img": "img/burger.jpg"
+            "img": "img/chickenChop1.jpg"
         },
         {
             "name": "Grilled Chicken",
@@ -40,7 +40,7 @@
         {
             "name": "Beaf Steak",
             "price": 36.90,
-            "img": "img/burger.jpg"
+            "img": "img/chickenChop1.jpg"
         }
     ],
     "Rice": [
