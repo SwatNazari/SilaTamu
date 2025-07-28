@@ -40,8 +40,10 @@ def send_order_to_whatsapp(CustomerName, TableNum, OrderItem, TotalHarga, phone_
     ])
     full_message = "\n".join(message_lines)
     encoded_message = urllib.parse.quote(full_message)
+    # Generate WhatsApp link
     whatsapp_url = f"https://wa.me/{phone_number}?text={encoded_message}"
-    return whatsapp_url
+    # Show link on Streamlit (phone users can tap this to send)
+    st.markdown(f"[📲 Klik untuk Hantar ke WhatsApp]({whatsapp_url})", unsafe_allow_html=True)
 
 # ---------------------- Load Menu ----------------------
 with open('SilaTamu-Menu.json') as myMenu:
