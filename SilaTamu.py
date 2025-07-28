@@ -118,6 +118,6 @@ if order_cart:
                         del st.session_state[qty_key]
                     if note_key in st.session_state:
                         del st.session_state[note_key]
-            st.experimental_rerun()
+            #st.experimental_rerun()
 else:
     st.info("🛒 Tiada item dalam pesanan. Sila pilih dari menu di atas.")
