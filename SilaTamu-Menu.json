@@ -1,81 +1,125 @@
-{
-  "Breakfast": [
-    { "name": "Nasi Lemak Bungkus", "price": 2.00, "img": "img/burger.jpg" },
-    { "name": "Nasi Lemak Telur Mata", "price": 3.50, "img": "img/burger.jpg" },
-    { "name": "Nasi Lemak Sambal Sotong", "price": 6.00, "img": "img/burger.jpg" },
-    { "name": "Nasi Lemak Ayam Goreng Berempah", "price": 7.90, "img": "img/burger.jpg" },
-    { "name": "Mee Jawa", "price": 6.90, "img": "img/burger.jpg" },
-    { "name": "Roti Jala", "price": 6.90, "img": "img/burger.jpg" }
-  ],
-  "Main Act": [
-    { "name": "Chicken Chop", "price": 11.90, "img": "img/burger.jpg" },
-    { "name": "Grilled Chicken", "price": 11.90, "img": "img/burger.jpg" },
-    { "name": "Lamb Chop", "price": 23.90, "img": "img/burger.jpg" },
-    { "name": "Mixed Grill", "price": 35.90, "img": "img/burger.jpg" },
-    { "name": "Beef Steak", "price": 36.90, "img": "img/burger.jpg" }
-  ],
-  "Rice": [
-    { "name": "Hainanese Chicken Rice", "price": 7.90, "img": "img/burger.jpg" },
-    { "name": "Fried Rice", "price": 7.90, "img": "img/burger.jpg" },
-    { "name": "Chicken Chop Fried Rice", "price": 11.90, "img": "img/burger.jpg" },
-    { "name": "Grilled Chicken Fried Rice", "price": 15.90, "img": "img/burger.jpg" }
-  ],
-  "Pasta": [
-    { "name": "Seafood Aglio Olio", "price": 11.90, "img": "img/burger.jpg" },
-    { "name": "Chicken Carbonara", "price": 11.90, "img": "img/burger.jpg" },
-    { "name": "Creamy Tom Yum Pasta", "price": 11.90, "img": "img/burger.jpg" },
-    { "name": "Chicken Chop Pasta", "price": 18.90, "img": "img/burger.jpg" },
-    { "name": "Grilled Chicken Pasta", "price": 18.90, "img": "img/burger.jpg" },
-    { "name": "Lamb Pasta", "price": 27.90, "img": "img/burger.jpg" }
-  ],
-  "Quick Fix": [
-    { "name": "Swedish Meatballs", "price": 8.90, "img": "img/burger.jpg" },
-    { "name": "French Fries", "price": 4.90, "img": "img/burger.jpg" },
-    { "name": "Cheezy Potato Bites", "price": 6.90, "img": "img/burger.jpg" }
-  ],
-  "Wok It Out": [
-    { "name": "Maggie Tumis", "price": 6.90, "img": "img/burger.jpg" }
-  ],
-  "Kids": [
-    { "name": "Chicken Pasta", "price": 7.90, "img": "img/burger.jpg" }
-  ],
-  "Coffee": [
-    { "name": "Americano", "hot": 5.50, "iced": 6.50, "img": "img/burger.jpg" },
-    { "name": "Latte", "hot": 6.50, "iced": 7.50, "img": "img/burger.jpg" },
-    { "name": "Cappuccino", "hot": 7.50, "iced": 8.50, "img": "img/burger.jpg" },
-    { "name": "Butterscotch Latte", "hot": 8.90, "iced": 9.90, "img": "img/burger.jpg" },
-    { "name": "Caramel Latte", "hot": 8.90, "iced": 9.90, "img": "img/burger.jpg" },
-    { "name": "Salted Caramel Latte", "hot": 8.90, "iced": 9.90, "img": "img/burger.jpg" },
-    { "name": "French Vanilla Latte", "hot": 8.90, "iced": 9.90, "img": "img/burger.jpg" },
-    { "name": "Hazelnut Latte", "hot": 8.90, "iced": 9.90, "img": "img/burger.jpg" },
-    { "name": "Spanish Latte", "hot": 8.90, "iced": 9.90, "img": "img/burger.jpg" },
-    { "name": "Tiramisu Latte", "hot": 10.50, "iced": 11.50, "img": "img/burger.jpg" },
-    { "name": "Mocha", "hot": 10.50, "iced": 11.50, "img": "img/burger.jpg" },
-    { "name": "Vietnamese Latte", "hot": 8.70, "iced": 9.70, "img": "img/burger.jpg" }
-  ],
-  "Chocolate": [
-    { "name": "Chocolate", "hot": 8.60, "iced": 9.60, "img": "img/burger.jpg" },
-    { "name": "French Vanilla Chocolate", "hot": 9.30, "iced": 10.30, "img": "img/burger.jpg" },
-    { "name": "Hazelnut Chocolate", "hot": 9.30, "iced": 10.30, "img": "img/burger.jpg" },
-    { "name": "Salted Caramel Chocolate", "hot": 9.30, "iced": 10.30, "img": "img/burger.jpg" }
-  ],
-  "Tea": [
-    { "name": "Matcha Latte", "hot": 9.20, "iced": 10.20, "img": "img/burger.jpg" },
-    { "name": "Strawberry Matcha Latte", "hot": 9.10, "iced": 10.90, "img": "img/burger.jpg" },
-    { "name": "Taro Matcha Latte", "hot": 9.70, "iced": 10.70, "img": "img/burger.jpg" },
-    { "name": "Green Tea Latte", "hot": 8.90, "iced": 9.90, "img": "img/burger.jpg" }
-  ],
-  "Creamy Yummy": [
-    { "name": "Chocolate", "hot": 6.50, "iced": 6.50, "img": "img/burger.jpg" },
-    { "name": "Strawberry", "hot": 6.50, "iced": 6.50, "img": "img/burger.jpg" },
-    { "name": "Taro", "hot": 6.50, "iced": 6.50, "img": "img/burger.jpg" }
-  ],
-  "Lokal": [
-    { "name": "Kopi O", "hot": 1.80, "iced": 2.00, "img": "img/burger.jpg" },
-    { "name": "Kopi", "hot": 2.80, "iced": 3.00, "img": "img/burger.jpg" },
-    { "name": "Teh O", "hot": 1.80, "iced": 2.00, "img": "img/burger.jpg" },
-    { "name": "Teh", "hot": 2.80, "iced": 3.00, "img": "img/burger.jpg" },
-    { "name": "Sirap", "hot": 2.00, "iced": 2.50, "img": "img/burger.jpg" },
-    { "name": "Air Kosong", "hot": 0.50, "iced": 0.50, "img": "img/burger.jpg" }
-  ]
+    "Goreng Panas": [
+      {"name": "N.Goreng Biasa", "price": 6.50, "img": "img/burger.jpg"},
+      {"name": "N.Goreng Ayam", "price": 8.50, "img": "img/burger.jpg"},
+      {"name": "N.Goreng Daging", "price": 9.00, "img": "img/burger.jpg"},
+      {"name": "N.Goreng Cili Padi", "price": 7.00, "img": "img/burger.jpg"},
+      {"name": "N.Goreng Kampung", "price": 7.00, "img": "img/burger.jpg"},
+      {"name": "N.Goreng USA", "price": 9.50, "img": "img/burger.jpg"},
+      {"name": "N.Goreng Tomyam", "price": 7.50, "img": "img/burger.jpg"},
+      {"name": "N.Goreng Seafood", "price": 9.50, "img": "img/burger.jpg"},
+      {"name": "N.Goreng Pattaya", "price": 8.50, "img": "img/burger.jpg"},
+      {"name": "N.Goreng Cina", "price": 7.00, "img": "img/burger.jpg"},
+      {"name": "N.Goreng Ikan Masin", "price": 7.50, "img": "img/burger.jpg"},
+      {"name": "N.Goreng Belacan", "price": 7.00, "img": "img/burger.jpg"},
+      {"name": "N.Goreng Paprik", "price": 8.50, "img": "img/burger.jpg"},
+      {"name": "N.Goreng Thai", "price": 7.00, "img": "img/burger.jpg"},
+      {"name": "N.Goreng Thai Special", "price": 8.50, "img": "img/burger.jpg"},
+      {"name": "N.Goreng Ladna", "price": 8.00, "img": "img/burger.jpg"},
+      {"name": "N.Goreng Pakapau", "price": 8.00, "img": "img/burger.jpg"},
+      {"name": "N.Goreng ChiangMai", "price": 8.50, "img": "img/burger.jpg"},
+      {"name": "N.Goreng Patkemau", "price": 8.50, "img": "img/burger.jpg"},
+      {"name": "N.Goreng BlackPepper", "price": 8.00, "img": "img/burger.jpg"}
+    ],
+    "Sup": [
+      {"name": "Sup Ayam", "price": 7.00, "img": "img/burger.jpg"},
+      {"name": "Sup Daging", "price": 7.50, "img": "img/burger.jpg"},
+      {"name": "Sup Campur", "price": 10.00, "img": "img/burger.jpg"},
+      {"name": "Sup Ekor", "price": 16.00, "img": "img/burger.jpg"},
+      {"name": "Sup Perut", "price": 9.00, "img": "img/burger.jpg"},
+      {"name": "Sup Tulang", "price": 13.00, "img": "img/burger.jpg"},
+      {"name": "Sup Udang", "price": 8.00, "img": "img/burger.jpg"},
+      {"name": "Sup Sayur", "price": 6.50, "img": "img/burger.jpg"}
+    ],
+    "Mee/Maggi/Bihun/Kueyteow": [
+      {"name": "Goreng", "price": 7.00, "img": "img/burger.jpg"},
+      {"name": "Pattaya", "price": 8.00, "img": "img/burger.jpg"},
+      {"name": "Tomyam", "price": 7.00, "img": "img/burger.jpg"},
+      {"name": "Ladna", "price": 7.50, "img": "img/burger.jpg"},
+      {"name": "Kungfu", "price": 8.00, "img": "img/burger.jpg"},
+      {"name": "Hailam", "price": 8.00, "img": "img/burger.jpg"},
+      {"name": "Sup", "price": 7.00, "img": "img/burger.jpg"},
+      {"name": "Kantonis", "price": 7.50, "img": "img/burger.jpg"},
+      {"name": "Bandung", "price": 7.50, "img": "img/burger.jpg"},
+      {"name": "Hokkien", "price": 7.50, "img": "img/burger.jpg"},
+      {"name": "Mamak", "price": 8.00, "img": "img/burger.jpg"}
+    ],
+    "Tomyam": [
+      {"name": "Ayam", "price": 7.00, "img": "img/burger.jpg"},
+      {"name": "Daging", "price": 7.00, "img": "img/burger.jpg"},
+      {"name": "Sotong", "price": 8.00, "img": "img/burger.jpg"},
+      {"name": "Udang", "price": 8.00, "img": "img/burger.jpg"},
+      {"name": "Seafood", "price": 9.00, "img": "img/burger.jpg"},
+      {"name": "Campur", "price": 10.00, "img": "img/burger.jpg"},
+      {"name": "Poktek", "price": 18.00, "img": "img/burger.jpg"},
+      {"name": "Sayur", "price": 7.00, "img": "img/burger.jpg"}
+    ],
+    "Ayam/Daging": [
+      {"name": "Masak Merah", "price": 7.50, "img": "img/burger.jpg"},
+      {"name": "Paprik", "price": 7.50, "img": "img/burger.jpg"},
+      {"name": "Halia", "price": 7.50, "img": "img/burger.jpg"},
+      {"name": "Goreng/Kunyit", "price": 7.50, "img": "img/burger.jpg"},
+      {"name": "Kicap", "price": 7.50, "img": "img/burger.jpg"},
+      {"name": "Patpek", "price": 7.50, "img": "img/burger.jpg"},
+      {"name": "Patkapau", "price": 7.50, "img": "img/burger.jpg"},
+      {"name": "Bawang Putih", "price": 8.00, "img": "img/burger.jpg"},
+      {"name": "Black Pepper", "price": 7.50, "img": "img/burger.jpg"},
+      {"name": "Kerabu", "price": 7.50, "img": "img/burger.jpg"}
+    ],
+    "Udang/Sotong": [
+      {"name": "Paprik", "price": 8.50, "img": "img/burger.jpg"},
+      {"name": "Kunyit", "price": 8.50, "img": "img/burger.jpg"},
+      {"name": "Tepung", "price": 8.50, "img": "img/burger.jpg"},
+      {"name": "Masam Manis", "price": 8.50, "img": "img/burger.jpg"},
+      {"name": "Kicap", "price": 8.00, "img": "img/burger.jpg"},
+      {"name": "Butter", "price": 8.50, "img": "img/burger.jpg"},
+      {"name": "Merah", "price": 8.00, "img": "img/burger.jpg"},
+      {"name": "Kerabu", "price": 8.50, "img": "img/burger.jpg"}
+    ],
+    "Telur": [
+      {"name": "Telur Bistik", "price": 8.00, "img": "img/burger.jpg"},
+      {"name": "Telur Bungkus", "price": 5.50, "img": "img/burger.jpg"},
+      {"name": "Telur Dadar", "price": 2.00, "img": "img/burger.jpg"},
+      {"name": "Telur Mata", "price": 1.50, "img": "img/burger.jpg"},
+      {"name": "Telur Rebus", "price": 1.00, "img": "img/burger.jpg"}
+    ],
+    "Set": [
+      {
+        "name": "Set 2 Orang",
+        "price": 39.00,
+        "img": "img/burger.jpg",
+        "items": ["Bawal Masak 3 Rasa/Pedas", "Nasi Putih - 2", "Tomyam Ayam", "Telur Dadar", "Air Sirap - 2"]
+      },
+      {
+        "name": "Set 5 Orang",
+        "price": 80.00,
+        "img": "img/burger.jpg",
+        "items": ["Siakap Steam", "Kangkung Belacan/Kailan Ikan Masin", "Telur Dadar - 2", "Daging Masak Merah", "Tomyam Campur", "Nasi Putih - 5", "Air Sirap - 1 Jug"]
+      },
+      {
+        "name": "Set Special",
+        "price": 70.00,
+        "img": "img/burger.jpg",
+        "items": ["Bawal/Siakap", "3 Rasa/Steam/Masak Pedas", "Kailan Ikan Masin/Kangkung Belacan", "Telur Dadar", "Nasi Putih - 3", "Tomyam Ayam", "Air Sirap - 3"]
+      }
+    ],
+    "Ikan": [
+      {"name": "Ikan Bawal 3 Rasa", "price": 15.00, "img": "img/burger.jpg"},
+      {"name": "Ikan Bawal Asam Pedas", "price": 15.00, "img": "img/burger.jpg"},
+      {"name": "Ikan Bawal Masak Pedas", "price": 15.00, "img": "img/burger.jpg"},
+      {"name": "Ikan Siakap 3 Rasa", "price": 29.00, "img": "img/burger.jpg"},
+      {"name": "Ikan Siakap Asam Pedas", "price": 29.00, "img": "img/burger.jpg"},
+      {"name": "Ikan Siakap Masak Pedas", "price": 29.00, "img": "img/burger.jpg"},
+      {"name": "Ikan Kembung 3 Rasa", "price": 10.00, "img": "img/burger.jpg"},
+      {"name": "Ikan Kembung Asam Pedas", "price": 10.00, "img": "img/burger.jpg"},
+      {"name": "Ikan Kembung Masak Pedas", "price": 10.00, "img": "img/burger.jpg"},
+      {"name": "Ikan Kembung Singgang", "price": 10.00, "img": "img/burger.jpg"}
+    ],
+    "Sayur": [
+      {"name": "Kailan Goreng Biasa", "price": 6.00, "img": "img/burger.jpg"},
+      {"name": "Kailan Ikan Masin", "price": 6.00, "img": "img/burger.jpg"},
+      {"name": "Kangkung Belacan", "price": 6.50, "img": "img/burger.jpg"},
+      {"name": "Sawi Goreng Biasa", "price": 6.50, "img": "img/burger.jpg"},
+      {"name": "Sayur Campur", "price": 6.50, "img": "img/burger.jpg"}
+    ]
+  }
 }
