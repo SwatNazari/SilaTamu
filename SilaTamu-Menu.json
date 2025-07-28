@@ -1,196 +1,195 @@
 {
-    "Goreng2 Panas2": [
-        {
-            "name": "N.Goreng Biasa",
-            "price": 6.50,
-            "img": "img/nasilemak1.jpg"
-        },
-        {
-            "name": "N.Goreng Ayam",
-            "price": 8.50,
-            "img": "img/burger.jpg"
-        },
-        {
-            "name": "N.Goreng Daging",
-            "price": 9.00,
-            "img": "img/nasilemak1.jpg"
-        },
-        {
-            "name": "N.Goreng Cili Padi",
-            "price": 7.00,
-            "img": "img/nasilemak1.jpg"
-        },
-        {
-            "name": "N.Goreng Kampung",
-            "price": 7.00,
-            "img": "img/nasilemak1.jpg"
-        },
-        {
-            "name": "N.Goreng USA",
-            "price": 9.50,
-            "img": "img/nasilemak1.jpg"
-        },
-        {
-            "name": "N.Goreng Tomyam",
-            "price": 7.50,
-            "img": "img/nasilemak1.jpg"
-        }
-        {
-            "name": "N.Goreng Seafood",
-            "price": 9.50,
-            "img": "img/nasilemak1.jpg"
-        }
-        {
-            "name": "N.Goreng Pattaya",
-            "price": 8.50,
-            "img": "img/nasilemak1.jpg"
-        },
-        {
-            "name": "N.Goreng Cina",
-            "price": 7.00,
-            "img": "img/nasilemak1.jpg"
-        },
-        {
-            "name": "N.Goreng Ikan Masin",
-            "price": 7.50,
-            "img": "img/nasilemak1.jpg"
-        },
-        {
-            "name": "N.Goreng Belacan",
-            "price": 7.00,
-            "img": "img/nasilemak1.jpg"
-        }
-        {
-            "name": "N.Goreng Padprik",
-            "price": 8.50,
-            "img": "img/nasilemak1.jpg"
-        }
-        {
-            "name": "N.Goreng Thai",
-            "price": 7.00,
-            "img": "img/nasilemak1.jpg"
-        },
-        {
-            "name": "N.Goreng Thai Special",
-            "price": 8.50,
-            "img": "img/nasilemak1.jpg"
-        },
-        {
-            "name": "N.Goreng Ladna",
-            "price": 8.00,
-            "img": "img/nasilemak1.jpg"
-        },
-        {
-            "name": "N.Goreng Pakapau",
-            "price": 8.00,
-            "img": "img/nasilemak1.jpg"
-        },
-        {
-            "name": "N.Goreng ChiangMai",
-            "price": 8.50,
-            "img": "img/nasilemak1.jpg"
-        },
-        {
-            "name": "N.Goreng Patkemau",
-            "price": 8.50,
-            "img": "img/nasilemak1.jpg"
-        },
-        {
-            "name": "N.Goreng BlackPepper",
-            "price": 8.00,
-            "img": "img/nasilemak1.jpg"
-        }
-        
-    ],
-    "Aneka Sup": [
-          {
-            "name": "Sup Ayam",
-            "price": 7.00,
-            "img": "img/chickenChop1.jpg"
-        },
-        {
-            "name": "Sup Daging",
-            "price": 7.50,
-            "img": "img/burger.jpg"
-        },
-        {
-            "name": "Sup Campur",
-            "price": 10.00,
-            "img": "img/burger.jpg"
-        },
-        {
-            "name": "Sup Ekor",
-            "price": 16.00,
-            "img": "img/chickenChop1.jpg"
-        },
-        {
-            "name": "Sup Perut",
-            "price": 9.00,
-            "img": "img/chickenChop1.jpg"
-        },
-        {
-            "name": "Sup Tulang",
-            "price": 13.00,
-            "img": "img/chickenChop1.jpg"
-        },
-        {
-            "name": "Sup Udang",
-            "price": 8.00,
-            "img": "img/chickenChop1.jpg"
-        },
-        {
-            "name": "Sup Sayur",
-            "price": 6.50,
-            "img": "img/chickenChop1.jpg"
-        }
-    ],
-    "Mee/Maggi/Bihun/Kueytew": [
-          {
-            "name": "Hainanese Chicken Rice",
-            "price": 7.90,
-            "img": "img/burger.jpg"
-        },
-        {
-            "name": "Chicken Chop Fried Rice",
-            "price": 15.90,
-            "img": "img/burger.jpg"
-        },
-        {
-            "name": "Grilled Chicken Fried Rice",
-            "price": 15.90,
-            "img": "img/burger.jpg"
-        }
-    ],
-    "Pasta": [
-          {
-            "name": "Seafood Agilo Olio",
-            "price": 11.90,
-            "img": "img/burger.jpg"
-        },
-        {
-            "name": "Chicken Carbonara",
-            "price": 11.90,
-            "img": "img/burger.jpg"
-        },
-        {
-            "name": "Creamy Tom Yum Pasta",
-            "price": 11.90,
-            "img": "img/burger.jpg"
-        },
-        {
-            "name": "Chicken Chop Pasta",
-            "price": 18.90,
-            "img": "img/burger.jpg"
-        },
-        {
-            "name": "Grilled Chicken Pasta",
-            "price": 18.90,
-            "img": "img/burger.jpg"
-        },
-        {
-            "name": "Lamb Pasta",
-            "price": 27.90,
-            "img": "img/burger.jpg"
-        }
-    ]
+  "Goreng2 Panas2": [
+    {
+      "name": "N.Goreng Biasa",
+      "price": 6.50,
+      "img": "img/nasilemak1.jpg"
+    },
+    {
+      "name": "N.Goreng Ayam",
+      "price": 8.50,
+      "img": "img/burger.jpg"
+    },
+    {
+      "name": "N.Goreng Daging",
+      "price": 9.00,
+      "img": "img/nasilemak1.jpg"
+    },
+    {
+      "name": "N.Goreng Cili Padi",
+      "price": 7.00,
+      "img": "img/nasilemak1.jpg"
+    },
+    {
+      "name": "N.Goreng Kampung",
+      "price": 7.00,
+      "img": "img/nasilemak1.jpg"
+    },
+    {
+      "name": "N.Goreng USA",
+      "price": 9.50,
+      "img": "img/nasilemak1.jpg"
+    },
+    {
+      "name": "N.Goreng Tomyam",
+      "price": 7.50,
+      "img": "img/nasilemak1.jpg"
+    },
+    {
+      "name": "N.Goreng Seafood",
+      "price": 9.50,
+      "img": "img/nasilemak1.jpg"
+    },
+    {
+      "name": "N.Goreng Pattaya",
+      "price": 8.50,
+      "img": "img/nasilemak1.jpg"
+    },
+    {
+      "name": "N.Goreng Cina",
+      "price": 7.00,
+      "img": "img/nasilemak1.jpg"
+    },
+    {
+      "name": "N.Goreng Ikan Masin",
+      "price": 7.50,
+      "img": "img/nasilemak1.jpg"
+    },
+    {
+      "name": "N.Goreng Belacan",
+      "price": 7.00,
+      "img": "img/nasilemak1.jpg"
+    },
+    {
+      "name": "N.Goreng Padprik",
+      "price": 8.50,
+      "img": "img/nasilemak1.jpg"
+    },
+    {
+      "name": "N.Goreng Thai",
+      "price": 7.00,
+      "img": "img/nasilemak1.jpg"
+    },
+    {
+      "name": "N.Goreng Thai Special",
+      "price": 8.50,
+      "img": "img/nasilemak1.jpg"
+    },
+    {
+      "name": "N.Goreng Ladna",
+      "price": 8.00,
+      "img": "img/nasilemak1.jpg"
+    },
+    {
+      "name": "N.Goreng Pakapau",
+      "price": 8.00,
+      "img": "img/nasilemak1.jpg"
+    },
+    {
+      "name": "N.Goreng ChiangMai",
+      "price": 8.50,
+      "img": "img/nasilemak1.jpg"
+    },
+    {
+      "name": "N.Goreng Patkemau",
+      "price": 8.50,
+      "img": "img/nasilemak1.jpg"
+    },
+    {
+      "name": "N.Goreng BlackPepper",
+      "price": 8.00,
+      "img": "img/nasilemak1.jpg"
+    }
+  ],
+  "Aneka Sup": [
+    {
+      "name": "Sup Ayam",
+      "price": 7.00,
+      "img": "img/chickenChop1.jpg"
+    },
+    {
+      "name": "Sup Daging",
+      "price": 7.50,
+      "img": "img/burger.jpg"
+    },
+    {
+      "name": "Sup Campur",
+      "price": 10.00,
+      "img": "img/burger.jpg"
+    },
+    {
+      "name": "Sup Ekor",
+      "price": 16.00,
+      "img": "img/chickenChop1.jpg"
+    },
+    {
+      "name": "Sup Perut",
+      "price": 9.00,
+      "img": "img/chickenChop1.jpg"
+    },
+    {
+      "name": "Sup Tulang",
+      "price": 13.00,
+      "img": "img/chickenChop1.jpg"
+    },
+    {
+      "name": "Sup Udang",
+      "price": 8.00,
+      "img": "img/chickenChop1.jpg"
+    },
+    {
+      "name": "Sup Sayur",
+      "price": 6.50,
+      "img": "img/chickenChop1.jpg"
+    }
+  ],
+  "Mee/Maggi/Bihun/Kueytew": [
+    {
+      "name": "Hainanese Chicken Rice",
+      "price": 7.90,
+      "img": "img/burger.jpg"
+    },
+    {
+      "name": "Chicken Chop Fried Rice",
+      "price": 15.90,
+      "img": "img/burger.jpg"
+    },
+    {
+      "name": "Grilled Chicken Fried Rice",
+      "price": 15.90,
+      "img": "img/burger.jpg"
+    }
+  ],
+  "Pasta": [
+    {
+      "name": "Seafood Agilo Olio",
+      "price": 11.90,
+      "img": "img/burger.jpg"
+    },
+    {
+      "name": "Chicken Carbonara",
+      "price": 11.90,
+      "img": "img/burger.jpg"
+    },
+    {
+      "name": "Creamy Tom Yum Pasta",
+      "price": 11.90,
+      "img": "img/burger.jpg"
+    },
+    {
+      "name": "Chicken Chop Pasta",
+      "price": 18.90,
+      "img": "img/burger.jpg"
+    },
+    {
+      "name": "Grilled Chicken Pasta",
+      "price": 18.90,
+      "img": "img/burger.jpg"
+    },
+    {
+      "name": "Lamb Pasta",
+      "price": 27.90,
+      "img": "img/burger.jpg"
+    }
+  ]
 }
