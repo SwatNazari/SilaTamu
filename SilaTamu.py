@@ -59,44 +59,9 @@ with col1:
     CustomerName = st.text_input("🧑‍🍳 Nama Pelanggan")
 with col2:
     selected_table = st.selectbox("🪑 Nombor Meja", list(range(1, 11)))
-
-# ---------------------- Search Function ----------------------
-search_query = st.text_input("🔍 Cari Menu", "")
-
 # ---------------------- Tabs per Category ----------------------
 tabs = st.tabs(list(menu.keys()))
 order_cart = {}
-
-# ---------------------- Menu Items with Search ----------------------
-for i, category in enumerate(menu.keys()):
-    with tabs[i]:
-        st.header(f"📂 {category}")
-        found = False
-        for item in menu[category]:
-            if search_query.lower() in item["name"].lower():
-                found = True
-                col1, col2, col3 = st.columns([1, 2, 2])
-                with col1:
-                    st.image(item["img"], width=100)
-                with col2:
-                    st.subheader(item["name"])
-                    st.write(f"💵 Harga: RM{item['price']:.2f}")
-                with col3:
-                    qty_key = f"{category}_{item['name']}_qty"
-                    note_key = f"{category}_{item['name']}_note"
-                    qty = st.number_input("Kuantiti", min_value=0, step=1, key=qty_key)
-                    note = st.text_input("Nota", key=note_key)
-
-                    if qty > 0:
-                        order_cart[item["name"]] = {
-                            "qty": qty,
-                            "price": item["price"],
-                            "note": note.strip()
-                        }
-
-        if not found and search_query:
-            st.info(f"❌ Tiada menu ditemui dalam kategori **{category}** yang sepadan dengan '**{search_query}**'.")
-
 # ---------------------- Order Summary ----------------------
 st.markdown("---")
 st.subheader("🧾 Ringkasan Pesanan")
