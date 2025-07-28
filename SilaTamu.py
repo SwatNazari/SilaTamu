@@ -14,22 +14,31 @@ def printOrder(CustomerName, TableNum, OrderItem, TotalHarga):
     print("-------------------------------------")
 
 # ---------------------- Function: Save Order to Text File ----------------------
-def save_order_to_text(CustomerName, TableNum, OrderItem, TotalHarga, filename="orders.txt"):
-    with open(filename, "a") as f:
-        f.write("=====================================\n")
-        f.write(f"Nama Pelanggan : {CustomerName.upper()}\n")
-        f.write(f"Nombor Meja    : {TableNum}\n")
-        f.write("-------------------------------------\n")
-        for item, details in OrderItem.items():
-            qty = details["qty"]
-            price = details["price"]
-            subtotal = qty * price
-            f.write(f"{item} x {qty} = RM{subtotal:.2f}\n")
-            if details['note']:
-                f.write(f"  Nota: {details['note']}\n")
-        f.write("-------------------------------------\n")
-        f.write(f"Jumlah         : RM{TotalHarga:.2f}\n")
-        f.write("=====================================\n\n")
+def send_order_to_whatsapp(CustomerName, TableNum, OrderItem, TotalHarga, phone_number="60193637573"):
+    message_lines = []
+    message_lines.append("📦 *Pesanan Baru Diterima*")
+    message_lines.append("=====================================")
+    message_lines.append(f"👤 *Nama Pelanggan:* {CustomerName.upper()}")
+    message_lines.append(f"🪑 *Nombor Meja:* {TableNum}")
+    message_lines.append(f"🕒 *Masa:* {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+    message_lines.append("-------------------------------------")
+    for item, details in OrderItem.items():
+        qty = details["qty"]
+        price = details["price"]
+        subtotal = qty * price
+        message_lines.append(f"{item} x {qty} = RM{subtotal:.2f}")
+        if details.get("note"):
+            message_lines.append(f"  Nota: {details['note']}")
+    message_lines.append("-------------------------------------")
+    message_lines.append(f"💵 *Jumlah:* RM{TotalHarga:.2f}")
+    message_lines.append("=====================================")
+    # Join all lines into a single string and encode for URL
+    full_message = "\n".join(message_lines)
+    encoded_message = urllib.parse.quote(full_message)
+    # Construct WhatsApp URL (use 'wa.me' for mobile and 'web.whatsapp.com' for desktop)
+    whatsapp_url = f"https://wa.me/{phone_number}?text={encoded_message}"
+    # Open WhatsApp in browser
+    webbrowser.open(whatsapp_url)
 
 # ---------------------- Load Menu ----------------------
 with open('SilaTamu-Menu.json') as myMenu:
@@ -103,7 +112,7 @@ if order_cart:
         if st.button("✅ Hantar Pesanan"):
             if CustomerName.strip():
                 printOrder(CustomerName, selected_table, order_cart, total)
-                save_order_to_text(CustomerName, selected_table, order_cart, total)
+                send_order_to_whatsapp(CustomerName, selected_table, order_cart, total, phone_number="60193637573")
                 st.success(f"🎉 Pesanan untuk **{CustomerName.upper()}** telah dihantar dan disimpan dalam fail teks!")
             else:
                 st.warning("⚠️ Sila masukkan nama pelanggan.")
