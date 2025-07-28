@@ -119,17 +119,5 @@ if order_cart:
                 whatsapp_url = send_order_to_whatsapp(CustomerName, selected_table, order_cart, total)
             else:
                 st.warning("⚠️ Sila masukkan nama pelanggan.")
-    with col2:
-        if st.button("🧹 Kosongkan Pesanan"):
-            # Reset semua input (qty dan note)
-            for category in menu.keys():
-                for item in menu[category]:
-                    qty_key = f"{category}_{item['name']}_qty"
-                    note_key = f"{category}_{item['name']}_note"
-                    if qty_key in st.session_state:
-                        del st.session_state[qty_key]
-                    if note_key in st.session_state:
-                        del st.session_state[note_key]
-            st.experimental_rerun()
 else:
     st.info("🛒 Tiada item dalam pesanan. Sila pilih dari menu di atas.")
