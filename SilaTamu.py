@@ -19,7 +19,7 @@ def printOrder(CustomerName, PhoneNumber, OrderItem, TotalHarga):
 def send_order_to_whatsapp(CustomerName, PhoneNumber, OrderItem, TotalHarga, phone_number_receiver="60193637573"):
     message_lines = [
         "📦 *Pesanan Baru Diterima*",
-        "=====================================",
+        "==============================",
         f"👤 *Nama Pelanggan:* {CustomerName.upper()}",
         f"📞 *Nombor Telefon:* {PhoneNumber}",
         f"🕒 *Masa:* {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}",
@@ -35,7 +35,7 @@ def send_order_to_whatsapp(CustomerName, PhoneNumber, OrderItem, TotalHarga, pho
     message_lines.extend([
         "-------------------------------------",
         f"💵 *Jumlah:* RM{TotalHarga:.2f}",
-        "=====================================",
+        "==============================",
     ])
     full_message = "\n".join(message_lines)
     encoded_message = urllib.parse.quote(full_message)
