@@ -83,26 +83,6 @@
       {"name": "Telur Mata", "price": 1.50, "img": "img/burger.jpg"},
       {"name": "Telur Rebus", "price": 1.00, "img": "img/burger.jpg"}
     ],
-    "Set": [
-      {
-        "name": "Set 2 Orang",
-        "price": 39.00,
-        "img": "img/burger.jpg",
-        "items": ["Bawal Masak 3 Rasa/Pedas", "Nasi Putih - 2", "Tomyam Ayam", "Telur Dadar", "Air Sirap - 2"]
-      },
-      {
-        "name": "Set 5 Orang",
-        "price": 80.00,
-        "img": "img/burger.jpg",
-        "items": ["Siakap Steam", "Kangkung Belacan/Kailan Ikan Masin", "Telur Dadar - 2", "Daging Masak Merah", "Tomyam Campur", "Nasi Putih - 5", "Air Sirap - 1 Jug"]
-      },
-      {
-        "name": "Set Special",
-        "price": 70.00,
-        "img": "img/burger.jpg",
-        "items": ["Bawal/Siakap", "3 Rasa/Steam/Masak Pedas", "Kailan Ikan Masin/Kangkung Belacan", "Telur Dadar", "Nasi Putih - 3", "Tomyam Ayam", "Air Sirap - 3"]
-      }
-    ],
     "Ikan": [
       {"name": "Ikan Bawal 3 Rasa", "price": 15.00, "img": "img/burger.jpg"},
       {"name": "Ikan Bawal Asam Pedas", "price": 15.00, "img": "img/burger.jpg"},
