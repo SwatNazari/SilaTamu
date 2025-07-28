@@ -1,6 +1,5 @@
 {
-  "menu": {
-    "Goreng Panas": [
+  "Goreng Panas": [
       {"name": "N.Goreng Biasa", "price": 6.50, "img": "img/burger.jpg"},
       {"name": "N.Goreng Ayam", "price": 8.50, "img": "img/burger.jpg"},
       {"name": "N.Goreng Daging", "price": 9.00, "img": "img/burger.jpg"},
@@ -123,5 +122,4 @@
       {"name": "Sawi Goreng Biasa", "price": 6.50, "img": "img/burger.jpg"},
       {"name": "Sayur Campur", "price": 6.50, "img": "img/burger.jpg"}
     ]
-  }
 }
