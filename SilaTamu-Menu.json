@@ -1,81 +1,81 @@
 {
   "Breakfast": [
-    { "name": "Nasi Lemak Bungkus", "price": 2.00, "img": "img/nasi-lemak-bungkus.jpg" },
-    { "name": "Nasi Lemak Telur Mata", "price": 3.50, "img": "img/nasi-lemak-telur.jpg" },
-    { "name": "Nasi Lemak Sambal Sotong", "price": 6.00, "img": "img/sambal-sotong.jpg" },
-    { "name": "Nasi Lemak Ayam Goreng Berempah", "price": 7.90, "img": "img/nasi-lemak-ayam.jpg" },
-    { "name": "Mee Jawa", "price": 6.90, "img": "img/mee-jawa.jpg" },
-    { "name": "Roti Jala", "price": 6.90, "img": "img/roti-jala.jpg" }
+    { "name": "Nasi Lemak Bungkus", "price": 2.00, "img": "img/burger.jpg" },
+    { "name": "Nasi Lemak Telur Mata", "price": 3.50, "img": "img/burger.jpg" },
+    { "name": "Nasi Lemak Sambal Sotong", "price": 6.00, "img": "img/burger.jpg" },
+    { "name": "Nasi Lemak Ayam Goreng Berempah", "price": 7.90, "img": "img/burger.jpg" },
+    { "name": "Mee Jawa", "price": 6.90, "img": "img/burger.jpg" },
+    { "name": "Roti Jala", "price": 6.90, "img": "img/burger.jpg" }
   ],
   "Main Act": [
-    { "name": "Chicken Chop", "price": 11.90, "img": "img/chicken-chop.jpg" },
-    { "name": "Grilled Chicken", "price": 11.90, "img": "img/grilled-chicken.jpg" },
-    { "name": "Lamb Chop", "price": 23.90, "img": "img/lamb-chop.jpg" },
-    { "name": "Mixed Grill", "price": 35.90, "img": "img/mixed-grill.jpg" },
-    { "name": "Beef Steak", "price": 36.90, "img": "img/beef-steak.jpg" }
+    { "name": "Chicken Chop", "price": 11.90, "img": "img/burger.jpg" },
+    { "name": "Grilled Chicken", "price": 11.90, "img": "img/burger.jpg" },
+    { "name": "Lamb Chop", "price": 23.90, "img": "img/burger.jpg" },
+    { "name": "Mixed Grill", "price": 35.90, "img": "img/burger.jpg" },
+    { "name": "Beef Steak", "price": 36.90, "img": "img/burger.jpg" }
   ],
   "Rice": [
-    { "name": "Hainanese Chicken Rice", "price": 7.90, "img": "img/hainanese-chicken.jpg" },
-    { "name": "Fried Rice", "price": 7.90, "img": "img/fried-rice.jpg" },
-    { "name": "Chicken Chop Fried Rice", "price": 11.90, "img": "img/chop-fried-rice.jpg" },
-    { "name": "Grilled Chicken Fried Rice", "price": 15.90, "img": "img/grilled-fried-rice.jpg" }
+    { "name": "Hainanese Chicken Rice", "price": 7.90, "img": "img/burger.jpg" },
+    { "name": "Fried Rice", "price": 7.90, "img": "img/burger.jpg" },
+    { "name": "Chicken Chop Fried Rice", "price": 11.90, "img": "img/burger.jpg" },
+    { "name": "Grilled Chicken Fried Rice", "price": 15.90, "img": "img/burger.jpg" }
   ],
   "Pasta": [
-    { "name": "Seafood Aglio Olio", "price": 11.90, "img": "img/aglio-olio.jpg" },
-    { "name": "Chicken Carbonara", "price": 11.90, "img": "img/carbonara.jpg" },
-    { "name": "Creamy Tom Yum Pasta", "price": 11.90, "img": "img/tomyum-pasta.jpg" },
-    { "name": "Chicken Chop Pasta", "price": 18.90, "img": "img/chop-pasta.jpg" },
-    { "name": "Grilled Chicken Pasta", "price": 18.90, "img": "img/grilled-pasta.jpg" },
-    { "name": "Lamb Pasta", "price": 27.90, "img": "img/lamb-pasta.jpg" }
+    { "name": "Seafood Aglio Olio", "price": 11.90, "img": "img/burger.jpg" },
+    { "name": "Chicken Carbonara", "price": 11.90, "img": "img/burger.jpg" },
+    { "name": "Creamy Tom Yum Pasta", "price": 11.90, "img": "img/burger.jpg" },
+    { "name": "Chicken Chop Pasta", "price": 18.90, "img": "img/burger.jpg" },
+    { "name": "Grilled Chicken Pasta", "price": 18.90, "img": "img/burger.jpg" },
+    { "name": "Lamb Pasta", "price": 27.90, "img": "img/burger.jpg" }
   ],
   "Quick Fix": [
-    { "name": "Swedish Meatballs", "price": 8.90, "img": "img/meatballs.jpg" },
-    { "name": "French Fries", "price": 4.90, "img": "img/french-fries.jpg" },
-    { "name": "Cheezy Potato Bites", "price": 6.90, "img": "img/cheezy-bites.jpg" }
+    { "name": "Swedish Meatballs", "price": 8.90, "img": "img/burger.jpg" },
+    { "name": "French Fries", "price": 4.90, "img": "img/burger.jpg" },
+    { "name": "Cheezy Potato Bites", "price": 6.90, "img": "img/burger.jpg" }
   ],
   "Wok It Out": [
-    { "name": "Maggie Tumis", "price": 6.90, "img": "img/maggie-tumis.jpg" }
+    { "name": "Maggie Tumis", "price": 6.90, "img": "img/burger.jpg" }
   ],
   "Kids": [
-    { "name": "Chicken Pasta", "price": 7.90, "img": "img/kids-pasta.jpg" }
+    { "name": "Chicken Pasta", "price": 7.90, "img": "img/burger.jpg" }
   ],
   "Coffee": [
-    { "name": "Americano", "hot": 5.50, "iced": 6.50, "img": "img/americano.jpg" },
-    { "name": "Latte", "hot": 6.50, "iced": 7.50, "img": "img/latte.jpg" },
-    { "name": "Cappuccino", "hot": 7.50, "iced": 8.50, "img": "img/cappuccino.jpg" },
-    { "name": "Butterscotch Latte", "hot": 8.90, "iced": 9.90, "img": "img/butterscotch.jpg" },
-    { "name": "Caramel Latte", "hot": 8.90, "iced": 9.90, "img": "img/caramel-latte.jpg" },
-    { "name": "Salted Caramel Latte", "hot": 8.90, "iced": 9.90, "img": "img/salted-caramel.jpg" },
-    { "name": "French Vanilla Latte", "hot": 8.90, "iced": 9.90, "img": "img/french-vanilla.jpg" },
-    { "name": "Hazelnut Latte", "hot": 8.90, "iced": 9.90, "img": "img/hazelnut.jpg" },
-    { "name": "Spanish Latte", "hot": 8.90, "iced": 9.90, "img": "img/spanish-latte.jpg" },
-    { "name": "Tiramisu Latte", "hot": 10.50, "iced": 11.50, "img": "img/tiramisu.jpg" },
-    { "name": "Mocha", "hot": 10.50, "iced": 11.50, "img": "img/mocha.jpg" },
-    { "name": "Vietnamese Latte", "hot": 8.70, "iced": 9.70, "img": "img/vietnamese.jpg" }
+    { "name": "Americano", "hot": 5.50, "iced": 6.50, "img": "img/burger.jpg" },
+    { "name": "Latte", "hot": 6.50, "iced": 7.50, "img": "img/burger.jpg" },
+    { "name": "Cappuccino", "hot": 7.50, "iced": 8.50, "img": "img/burger.jpg" },
+    { "name": "Butterscotch Latte", "hot": 8.90, "iced": 9.90, "img": "img/burger.jpg" },
+    { "name": "Caramel Latte", "hot": 8.90, "iced": 9.90, "img": "img/burger.jpg" },
+    { "name": "Salted Caramel Latte", "hot": 8.90, "iced": 9.90, "img": "img/burger.jpg" },
+    { "name": "French Vanilla Latte", "hot": 8.90, "iced": 9.90, "img": "img/burger.jpg" },
+    { "name": "Hazelnut Latte", "hot": 8.90, "iced": 9.90, "img": "img/burger.jpg" },
+    { "name": "Spanish Latte", "hot": 8.90, "iced": 9.90, "img": "img/burger.jpg" },
+    { "name": "Tiramisu Latte", "hot": 10.50, "iced": 11.50, "img": "img/burger.jpg" },
+    { "name": "Mocha", "hot": 10.50, "iced": 11.50, "img": "img/burger.jpg" },
+    { "name": "Vietnamese Latte", "hot": 8.70, "iced": 9.70, "img": "img/burger.jpg" }
   ],
   "Chocolate": [
-    { "name": "Chocolate", "hot": 8.60, "iced": 9.60, "img": "img/chocolate.jpg" },
-    { "name": "French Vanilla Chocolate", "hot": 9.30, "iced": 10.30, "img": "img/vanilla-choc.jpg" },
-    { "name": "Hazelnut Chocolate", "hot": 9.30, "iced": 10.30, "img": "img/hazelnut-choc.jpg" },
-    { "name": "Salted Caramel Chocolate", "hot": 9.30, "iced": 10.30, "img": "img/salted-choc.jpg" }
+    { "name": "Chocolate", "hot": 8.60, "iced": 9.60, "img": "img/burger.jpg" },
+    { "name": "French Vanilla Chocolate", "hot": 9.30, "iced": 10.30, "img": "img/burger.jpg" },
+    { "name": "Hazelnut Chocolate", "hot": 9.30, "iced": 10.30, "img": "img/burger.jpg" },
+    { "name": "Salted Caramel Chocolate", "hot": 9.30, "iced": 10.30, "img": "img/burger.jpg" }
   ],
   "Tea": [
-    { "name": "Matcha Latte", "hot": 9.20, "iced": 10.20, "img": "img/matcha.jpg" },
-    { "name": "Strawberry Matcha Latte", "hot": 9.10, "iced": 10.90, "img": "img/strawberry-matcha.jpg" },
-    { "name": "Taro Matcha Latte", "hot": 9.70, "iced": 10.70, "img": "img/taro-matcha.jpg" },
-    { "name": "Green Tea Latte", "hot": 8.90, "iced": 9.90, "img": "img/green-tea.jpg" }
+    { "name": "Matcha Latte", "hot": 9.20, "iced": 10.20, "img": "img/burger.jpg" },
+    { "name": "Strawberry Matcha Latte", "hot": 9.10, "iced": 10.90, "img": "img/burger.jpg" },
+    { "name": "Taro Matcha Latte", "hot": 9.70, "iced": 10.70, "img": "img/burger.jpg" },
+    { "name": "Green Tea Latte", "hot": 8.90, "iced": 9.90, "img": "img/burger.jpg" }
   ],
   "Creamy Yummy": [
-    { "name": "Chocolate", "hot": 6.50, "iced": 6.50, "img": "img/creamy-choc.jpg" },
-    { "name": "Strawberry", "hot": 6.50, "iced": 6.50, "img": "img/creamy-strawberry.jpg" },
-    { "name": "Taro", "hot": 6.50, "iced": 6.50, "img": "img/creamy-taro.jpg" }
+    { "name": "Chocolate", "hot": 6.50, "iced": 6.50, "img": "img/burger.jpg" },
+    { "name": "Strawberry", "hot": 6.50, "iced": 6.50, "img": "img/burger.jpg" },
+    { "name": "Taro", "hot": 6.50, "iced": 6.50, "img": "img/burger.jpg" }
   ],
   "Lokal": [
-    { "name": "Kopi O", "hot": 1.80, "iced": 2.00, "img": "img/kopi-o.jpg" },
-    { "name": "Kopi", "hot": 2.80, "iced": 3.00, "img": "img/kopi.jpg" },
-    { "name": "Teh O", "hot": 1.80, "iced": 2.00, "img": "img/teh-o.jpg" },
-    { "name": "Teh", "hot": 2.80, "iced": 3.00, "img": "img/teh.jpg" },
-    { "name": "Sirap", "hot": 2.00, "iced": 2.50, "img": "img/sirap.jpg" },
-    { "name": "Air Kosong", "hot": 0.50, "iced": 0.50, "img": "img/air-kosong.jpg" }
+    { "name": "Kopi O", "hot": 1.80, "iced": 2.00, "img": "img/burger.jpg" },
+    { "name": "Kopi", "hot": 2.80, "iced": 3.00, "img": "img/burger.jpg" },
+    { "name": "Teh O", "hot": 1.80, "iced": 2.00, "img": "img/burger.jpg" },
+    { "name": "Teh", "hot": 2.80, "iced": 3.00, "img": "img/burger.jpg" },
+    { "name": "Sirap", "hot": 2.00, "iced": 2.50, "img": "img/burger.jpg" },
+    { "name": "Air Kosong", "hot": 0.50, "iced": 0.50, "img": "img/burger.jpg" }
   ]
 }
