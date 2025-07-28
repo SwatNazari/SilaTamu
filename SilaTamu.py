@@ -23,7 +23,7 @@ def send_order_to_whatsapp(CustomerName, PhoneNumber, OrderItem, TotalHarga, pho
         f"👤 *Nama Pelanggan:* {CustomerName.upper()}",
         f"📞 *Nombor Telefon:* {PhoneNumber}",
         f"🕒 *Masa:* {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}",
-        "-------------------------------------",
+        "-------------------------------------------------",
     ]
     for item, details in OrderItem.items():
         qty = details["qty"]
@@ -33,7 +33,7 @@ def send_order_to_whatsapp(CustomerName, PhoneNumber, OrderItem, TotalHarga, pho
         if details.get("note"):
             message_lines.append(f"  Nota: {details['note']}")
     message_lines.extend([
-        "-------------------------------------",
+        "-------------------------------------------------",
         f"💵 *Jumlah:* RM{TotalHarga:.2f}",
         "==============================",
     ])
