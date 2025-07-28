@@ -102,29 +102,49 @@
         }
         
     ],
-    "Our Speciality": [
+    "Aneka Sup": [
           {
-            "name": "Chicken Chop",
-            "price": 11.90,
+            "name": "Sup Ayam",
+            "price": 7.00,
             "img": "img/chickenChop1.jpg"
         },
         {
-            "name": "Grilled Chicken",
-            "price": 23.90,
+            "name": "Sup Daging",
+            "price": 7.50,
             "img": "img/burger.jpg"
         },
         {
-            "name": "Mixed Grill",
-            "price": 35.90,
+            "name": "Sup Campur",
+            "price": 10.00,
             "img": "img/burger.jpg"
         },
         {
-            "name": "Beaf Steak",
-            "price": 36.90,
+            "name": "Sup Ekor",
+            "price": 16.00,
+            "img": "img/chickenChop1.jpg"
+        },
+        {
+            "name": "Sup Perut",
+            "price": 9.00,
+            "img": "img/chickenChop1.jpg"
+        },
+        {
+            "name": "Sup Tulang",
+            "price": 13.00,
+            "img": "img/chickenChop1.jpg"
+        },
+        {
+            "name": "Sup Udang",
+            "price": 8.00,
+            "img": "img/chickenChop1.jpg"
+        },
+        {
+            "name": "Sup Sayur",
+            "price": 6.50,
             "img": "img/chickenChop1.jpg"
         }
     ],
-    "Rice": [
+    "Mee/Maggi/Bihun/Kueytew": [
           {
             "name": "Hainanese Chicken Rice",
             "price": 7.90,
