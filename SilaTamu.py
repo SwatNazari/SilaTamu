@@ -1,135 +1,112 @@
 import streamlit as st
-import json
+import pandas as pd
 from datetime import datetime
-import urllib.parse
+import webbrowser
 
-# ---------------------- Function: Print to Console ----------------------
-def printOrder(CustomerName, PhoneNumber, OrderItem, TotalHarga):
-    print("-------------------------------------")
-    print(f"{CustomerName.upper()} [Nombor Telefon: {PhoneNumber} | Jumlah: RM{TotalHarga:.2f}]")
-    print("-------------------------------------")
-    for item, details in OrderItem.items():
-        subtotal = details["qty"] * details["price"]
-        print(f"{item} x {details['qty']} = RM{subtotal:.2f}")
-        if details['note']:
-            print(f"  Nota: {details['note']}")
-    print("-------------------------------------")
+st.set_page_config(page_title="Homestay Booking System", page_icon="🏡", layout="centered")
 
-# ---------------------- Function: Send Order to WhatsApp ----------------------
-def send_order_to_whatsapp(CustomerName, PhoneNumber, OrderItem, TotalHarga, phone_number_receiver="60193637573"):
-    message_lines = [
-        "📦 *Pesanan Baru Diterima*",
-        "==============================",
-        f"👤 *Nama Pelanggan:* {CustomerName.upper()}",
-        f"📞 *Nombor Telefon:* {PhoneNumber}",
-        f"🕒 *Masa:* {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}",
-        "-------------------------------------------------",
-    ]
-    for item, details in OrderItem.items():
-        qty = details["qty"]
-        price = details["price"]
-        subtotal = qty * price
-        message_lines.append(f"{item} x {qty} = RM{subtotal:.2f}")
-        if details.get("note"):
-            message_lines.append(f"  Nota: {details['note']}")
-    message_lines.extend([
-        "-------------------------------------------------",
-        f"💵 *Jumlah:* RM{TotalHarga:.2f}",
-        "==============================",
-    ])
-    full_message = "\n".join(message_lines)
-    encoded_message = urllib.parse.quote(full_message)
-    whatsapp_url = f"https://wa.me/{phone_number_receiver}?text={encoded_message}"
-    st.markdown(f"[📲 Klik disini untuk mengesahkan pesanan]({whatsapp_url})", unsafe_allow_html=True)
-    return whatsapp_url
+st.title("🏡 Homestay Booking System")
 
-# ---------------------- Load Menu ----------------------
-with open('SilaTamu-Menu.json') as myMenu:
-    menu = json.load(myMenu)
+# ============================================================
+# ROOM PACKAGES
+# ============================================================
+room_data = {
+    "Standard Room": 120,
+    "Deluxe Room": 180,
+    "Family Suite": 250,
+    "Villa": 400,
+}
 
-# ---------------------- UI Layout ----------------------
-st.set_page_config(page_title="SilaTamu Ordering", page_icon="🍽️")
-st.title("🍽️ Selamat Datang ke SilaTamu!")
-st.markdown("Pilih menu kegemaran anda dan buat pesanan anda sekarang. 😊")
+# ============================================================
+# USER INPUT FORM
+# ============================================================
+st.header("Guest Information")
 
-# Customer name and phone number input
-col1, col2 = st.columns([2, 1])
-with col1:
-    CustomerName = st.text_input("🧑‍🍳 Nama Pelanggan")
-with col2:
-    PhoneNumber = st.text_input("📞 Nombor Telefon", max_chars=15)
+name = st.text_input("Full Name")
+phone = st.text_input("Phone Number (WhatsApp)")
 
-# ---------------------- Tabs per Category ----------------------
-tabs = st.tabs(list(menu.keys()))
-order_cart = {}
+st.header("Booking Details")
 
-# ---------------------- Menu Items (No Search) ----------------------
-for i, category in enumerate(menu.keys()):
-    with tabs[i]:
-        st.header(f"📂 {category}")
-        for item in menu[category]:
-            col1, col2, col3 = st.columns([1, 2, 2])
-            with col1:
-                st.image(item["img"], width=100)
-            with col2:
-                st.subheader(item["name"])
-                # Show price based on available keys
-                if "price" in item:
-                    st.write(f"💵 Harga: RM{item['price']:.2f}")
-                elif "hot" in item and "iced" in item:
-                    st.write(f"💵 Harga Hot: RM{item['hot']:.2f} | Iced: RM{item['iced']:.2f}")
-                else:
-                    st.write("💵 Harga tidak tersedia")
-            with col3:
-                qty_key = f"{category}_{item['name']}_qty"
-                note_key = f"{category}_{item['name']}_note"
-                qty = st.number_input("Kuantiti", min_value=0, step=1, key=qty_key)
-                note = st.text_input("Nota", key=note_key)
+room = st.selectbox("Select Room Type", list(room_data.keys()))
+price_per_night = room_data[room]
 
-                if qty > 0:
-                    # Get price: prefer 'price', fallback to 'hot' if price missing
-                    price = item.get("price")
-                    if price is None:
-                        price = item.get("hot", 0)
-                    order_cart[item["name"]] = {
-                        "qty": qty,
-                        "price": price,
-                        "note": note.strip()
-                    }
+check_in = st.date_input("Check-In Date")
+check_out = st.date_input("Check-Out Date")
 
-# ---------------------- Order Summary ----------------------
-st.markdown("---")
-st.subheader("🧾 Ringkasan Pesanan")
-
-if order_cart:
-    total = 0
-    for item, details in order_cart.items():
-        subtotal = details["qty"] * details["price"]
-        total += subtotal
-        st.write(f"🔹 {item} x {details['qty']} = RM{subtotal:.2f}")
-        if details['note']:
-            st.write(f"   📝 Nota: {details['note']}")
-    st.markdown(f"## 💰 Jumlah Keseluruhan: RM{total:.2f}")
-
-    col1, col2 = st.columns(2)
-    with col1:
-        if st.button("✅ Hantar Pesanan"):
-            if CustomerName.strip() and PhoneNumber.strip():
-                printOrder(CustomerName, PhoneNumber, order_cart, total)
-                send_order_to_whatsapp(CustomerName, PhoneNumber, order_cart, total)
-            else:
-                st.warning("⚠️ Sila masukkan nama pelanggan dan nombor telefon.")
-    with col2:
-        if st.button("🧹 Kosongkan Pesanan"):
-            # Reset all qty and note inputs from session state
-            for category in menu.keys():
-                for item in menu[category]:
-                    qty_key = f"{category}_{item['name']}_qty"
-                    note_key = f"{category}_{item['name']}_note"
-                    if qty_key in st.session_state:
-                        del st.session_state[qty_key]
-                    if note_key in st.session_state:
-                        del st.session_state[note_key]
-            st.experimental_rerun()
+# Nights calculation
+if check_out > check_in:
+    nights = (check_out - check_in).days
 else:
-    st.info("🛒 Tiada item dalam pesanan. Sila pilih dari menu di atas.")
+    nights = 0
+
+total_price = nights * price_per_night
+
+st.write(f"**Price per night:** RM {price_per_night}")
+st.write(f"**Total nights:** {nights}")
+st.write(f"### Total Price: **RM {total_price}**")
+
+
+# ============================================================
+# SAVE BOOKING
+# ============================================================
+if st.button("Confirm Booking"):
+    if name == "" or phone == "" or nights == 0:
+        st.error("Please complete all fields properly.")
+    else:
+        booking = {
+            "Name": name,
+            "Phone": phone,
+            "Room": room,
+            "Check-In": check_in.strftime("%Y-%m-%d"),
+            "Check-Out": check_out.strftime("%Y-%m-%d"),
+            "Nights": nights,
+            "Total Price": total_price
+        }
+
+        # Save to CSV
+        df = pd.DataFrame([booking])
+
+        try:
+            existing = pd.read_csv("booking_list.csv")
+            df = pd.concat([existing, df], ignore_index=True)
+        except:
+            pass
+
+        df.to_csv("booking_list.csv", index=False)
+
+        st.success("Booking Confirmed! Saved successfully.")
+
+        # WhatsApp link auto-format
+        whatsapp_msg = (
+            f"Hello, I would like to confirm my booking:%0A"
+            f"Name: {name}%0A"
+            f"Phone: {phone}%0A"
+            f"Room: {room}%0A"
+            f"Check-In: {booking['Check-In']}%0A"
+            f"Check-Out: {booking['Check-Out']}%0A"
+            f"Nights: {nights}%0A"
+            f"Total Price: RM {total_price}"
+        )
+
+        wa_url = f"https://wa.me/{phone}?text={whatsapp_msg}"
+
+        st.markdown(f"[Send Booking Details via WhatsApp]({wa_url})")
+
+
+# ============================================================
+# RESET BUTTON
+# ============================================================
+if st.button("Reset Form"):
+    st.experimental_rerun()
+
+
+# ============================================================
+# VIEW SAVED BOOKINGS
+# ============================================================
+st.header("📘 Booking Records")
+
+try:
+    history = pd.read_csv("booking_list.csv")
+    st.dataframe(history)
+except:
+    st.info("No bookings yet.")
