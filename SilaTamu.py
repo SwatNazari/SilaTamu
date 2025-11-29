@@ -17,11 +17,18 @@ PRICE_PER_NIGHT = 150  # Set your homestay price here
 
 
 # ------------------------------------------------------------
-# LOAD EXISTING BOOKINGS
+# LOAD EXISTING BOOKINGS (FIXED DATE PARSING)
 # ------------------------------------------------------------
 def load_bookings():
     try:
-        return pd.read_csv("booking_list.csv", parse_dates=["Check-In", "Check-Out"])
+        df = pd.read_csv("booking_list.csv")
+
+        # Convert string to datetime
+        df["Check-In"] = pd.to_datetime(df["Check-In"])
+        df["Check-Out"] = pd.to_datetime(df["Check-Out"])
+
+        return df
+
     except:
         return pd.DataFrame(columns=[
             "Name", "Phone", "Check-In", "Check-Out", "Nights", "Total Price"
@@ -32,17 +39,20 @@ bookings = load_bookings()
 
 
 # ------------------------------------------------------------
-# CHECK AVAILABILITY
+# CHECK AVAILABILITY (FIXED)
 # ------------------------------------------------------------
 def is_available(start, end):
-    """Check if date range overlaps existing bookings."""
+    """Check if selected dates overlap existing bookings."""
     for _, row in bookings.iterrows():
-        booked_start = row["Check-In"].date()
-        booked_end = row["Check-Out"].date()
+
+        # Always ensure correct datetime conversion
+        booked_start = pd.to_datetime(row["Check-In"]).date()
+        booked_end = pd.to_datetime(row["Check-Out"]).date()
 
         # Overlap logic → NOT available
         if start < booked_end and end > booked_start:
             return False
+
     return True
 
 
@@ -62,7 +72,7 @@ def generate_whatsapp_summary(name, phone, check_in, check_out, nights, total_pr
         f"-------------------------%0A"
         f"Thank you for your booking! 😊"
     )
-    return f"https://wa.me/{60193637573}?text={msg}"
+    return f"https://wa.me/{phone}?text={msg}"
 
 
 # ------------------------------------------------------------
@@ -72,6 +82,7 @@ st.header("Guest Information")
 
 name = st.text_input("Full Name")
 phone = st.text_input("Phone Number (WhatsApp)")
+
 
 st.header("Booking Details")
 
@@ -106,7 +117,7 @@ if st.button("Confirm Booking"):
         st.error("❌ Room is already booked for these dates. Please choose another date.")
 
     else:
-        # Save booking to CSV
+        # Save booking
         new_booking = pd.DataFrame([{
             "Name": name,
             "Phone": phone,
@@ -121,12 +132,12 @@ if st.button("Confirm Booking"):
 
         st.success("✅ Booking confirmed! Booking saved successfully.")
 
-        # Generate WhatsApp link
+        # Generate WhatsApp summary link
         wa_link = generate_whatsapp_summary(
             name, phone, check_in, check_out, nights, total_price
         )
 
-        st.markdown(f"### 📲 Send Summary to Guest")
+        st.markdown("### 📲 Send Summary to Guest")
         st.markdown(f"[Send via WhatsApp]({wa_link})")
 
 
