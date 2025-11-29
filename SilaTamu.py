@@ -62,7 +62,7 @@ def generate_whatsapp_summary(name, phone, check_in, check_out, nights, total_pr
         f"-------------------------%0A"
         f"Thank you for your booking! 😊"
     )
-    return f"https://wa.me/{phone}?text={msg}"
+    return f"https://wa.me/{60193637573}?text={msg}"
 
 
 # ------------------------------------------------------------
